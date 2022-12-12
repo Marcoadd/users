@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+
+
+}
+body{
+    font-size: 1.6rem ;
+    
+}
+input{
+    outline: none;
+}
+.App{
+    width: 100%;
+    height: 100vh;
+}
+.titlePrincipal{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 4rem;
+    padding: 1rem;
+}
+.header_container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 1.5rem 1rem 1.5rem 1rem;
+}
+.header_button{
+    padding: .8rem 2rem .8rem 2rem;
+    background: linear-gradient(to left, #555A88, #9c9da8);
+    transition: .3s;
+    border: none;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #d3d3d3;
+}
+.header_button:hover{
+    transform: scale(1.05);
+    filter: brightness(1.15);
+}
+/* CARD USERS */
+
+
+.userCard{
+    border: 1px solid #E5E5E5;
+    box-shadow:  0.3em 0.3em 1em rgba(0,0,0,0.3);;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 30px;
+}
+.userCard:hover{
+    box-shadow:  0.5em 0.5em 1.5em rgba(0,0,0,0.3);;
+}
+.usersContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    padding-bottom: 2rem;
+}
+.userTitle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.lineContain{
+    width: 100%;
+    height: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+}
+.line{
+    background: #d3d3d3;
+    width: 85%;
+    height: 1px;
+}
+.userList{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.userItem{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 30px 20px;
+}
+.userItem span{
+    color: #d3d3d3;
+}
+.userButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-right: 1rem;
+}
+.userButton button:hover{
+    transform: scale(1.1);
+}
+.userButton button:nth-child(1){
+    padding: 1rem;
+    background: #d85d5d;
+    color: #fff;
+    border: 2px solid #d94848;
+    transition: .3s;
+}
+.userButton button:nth-child(2){
+    padding: 1rem;
+    background: #fff;
+    color: #aaa;
+    border: 2px solid rgb(134, 132, 132);
+    transition: .3s;
+}
+.containerForm{
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 2;
+    min-height: 100vh;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.disable_form{
+    display: none;
+}
+.form_title{
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+.form{
+    background-color: rgb(221, 220, 220);
+    padding: 1.5rem;
+    border-radius: 10px;
+    position: relative;
+}
+.Form_x{
+    position: absolute;
+    color: #555A88;
+    font-size: 30px;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+.Form_x:hover{
+    transform: scale(1.15);
+}
+.form>form{
+    padding: 2.5rem;
+    background-color: rgb(221, 220, 220);
+}
+.form_input{
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    margin: 0 auto;
+}
+.form_input>i{
+    font-size: 1.5rem;
+    margin: .3rem .5rem 0 0;
+}
+.form_input input{
+    margin-bottom: 1rem;
+    border: none;
+    outline: none;
+    background-color: rgb(221, 220, 220);
+}
+.form_input .bar{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.1);
+    width: 100%;
+    height: 1px;
+
+}
+.form_input .bar::before{
+    content: '';
+    position: absolute;
+    background-color:#555A88;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s;
+    border-radius: 5px;
+}
+.form_input>input:focus+.bar::before{
+    transform: scaleX(1);
+}
+.form_button{
+    width: 100%;
+    padding: .5rem 2rem .5rem 2rem;
+    margin-top: 1rem;
+    background: linear-gradient(to left, #555A88, #9c9da8);
+    transition: .3s;
+    border: none;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #d3d3d3;
+}
+.form_button:hover{
+    transform: scale(1.05);
+    filter: brightness(1.15);
+    
+}
+
+@media (max-width: 650px) {
+    .header_container{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        gap: 1rem;
+        padding: 10px;
+        margin: 1.5rem 1rem 1.5rem 1rem;
+    }
+    .userCard{
+        margin: 0 1.2rem 0 1.2rem;
+    }
+}
